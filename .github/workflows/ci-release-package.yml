@@ -37,11 +37,11 @@ jobs:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   publish_dir: ./docs
 
-            - id: publish
-              name: "🚀 Publish to NPM"
-              uses: JS-DevTools/npm-publish@v1
-              with:
-                  token: ${{ secrets.NPM_TOKEN }}
+            # - id: publish
+            #   name: "🚀 Publish to NPM"
+            #   uses: JS-DevTools/npm-publish@v1
+            #   with:
+            #       token: ${{ secrets.NPM_TOKEN }}
 
             - name: Create Git Release
               if: steps.publish.outputs.type != 'none'
