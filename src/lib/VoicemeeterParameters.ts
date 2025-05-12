@@ -14,19 +14,19 @@ import Voicemeeter from "./VoicemeeterConnector";
 
 type Value = string | number | undefined;
 
-async function getOption(vm: Voicemeeter, args: Value[]) {
+function getOption(vm: Voicemeeter, args: Value[]) {
 	return vm.getOption(args.join("."));
 }
 
-async function runOption(vm: Voicemeeter, ...args: Value[]) {
+function runOption(vm: Voicemeeter, ...args: Value[]) {
 	if (!vm.isConnected) {
 		throw new Error("Not connected ");
 	}
 
 	const value = args[args.length - 1];
 	args.pop(); // Removes undefined value and regular value to join differently
-	if (value !== undefined) await vm.setOption(`${args.join(".")}=${value}`);
-	return getOption(vm, args);
+	if (value !== undefined) vm.setOption(`${args.join(".")}=${value}`);
+	return getOption(vm, args); // Theres a race condition here so uh glhf
 }
 
 export function vmParameters(vm: Voicemeeter) {
