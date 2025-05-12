@@ -1,272 +1,884 @@
 import Voicemeeter from "./VoicemeeterConnector";
-declare type Value = string | number | undefined;
+declare type Value = string | number;
 export declare function vmParameters(vm: Voicemeeter): {
     Command: {
-        Shutdown: (value?: Value) => any;
-        Show: (value?: Value) => any;
-        Restart: (value?: Value) => any;
-        Eject: (value?: Value) => any;
-        Reset: (value?: Value) => any;
-        Save: (value?: Value) => any;
-        Load: (value?: Value) => any;
-        Lock: (value?: Value) => any;
+        Shutdown: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        Show: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        Restart: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        Eject: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        Reset: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        Save: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        Load: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        Lock: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
         Button: (i: number) => {
-            State: (value?: Value) => any;
-            StateOnly: (value?: Value) => any;
-            Trigger: (value?: Value) => any;
-            Color: (value?: Value) => any;
+            State: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            StateOnly: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            Trigger: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            Color: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
         };
         DialogShow: {
-            VBANCHAT: (value?: Value) => any;
+            VBANCHAT: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
         };
-        SaveBUSEQ: (j: number) => (value?: Value) => any;
-        LoadBUSEQ: (j: number) => (value?: Value) => any;
-        SaveStripEQ: (j: number) => (value?: Value) => any;
-        LoadStripEQ: (j: number) => (value?: Value) => any;
+        SaveBUSEQ: (j: number) => {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        LoadBUSEQ: (j: number) => {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        SaveStripEQ: (j: number) => {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        LoadStripEQ: (j: number) => {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
         Preset: (k: number) => {
-            Recall: (value?: Value) => any;
+            Recall: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
         };
     };
     Strip: (i: number) => {
-        Mono: (value?: Value) => any;
-        Mute: (value?: Value) => any;
-        Solo: (value?: Value) => any;
-        MC: (value?: Value) => any;
-        Gain: (value?: Value) => any;
-        GainLayer: (j: number) => (value?: Value) => any;
-        Pan_x: (value?: Value) => any;
-        Pan_y: (value?: Value) => any;
-        Color_x: (value?: Value) => any;
-        Color_y: (value?: Value) => any;
-        fx_x: (value?: Value) => any;
-        fx_y: (value?: Value) => any;
-        Audibility: (value?: Value) => any;
+        Mono: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        Mute: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        Solo: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        MC: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        Gain: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        GainLayer: (j: number) => {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        Pan_x: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        Pan_y: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        Color_x: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        Color_y: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        fx_x: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        fx_y: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        Audibility: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
         Comp: {
-            GainIn: (value?: Value) => any;
-            Ratio: (value?: Value) => any;
-            Threshold: (value?: Value) => any;
-            Attack: (value?: Value) => any;
-            Release: (value?: Value) => any;
-            Knee: (value?: Value) => any;
-            GainOut: (value?: Value) => any;
-            MakeUp: (value?: Value) => any;
+            GainIn: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            Ratio: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            Threshold: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            Attack: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            Release: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            Knee: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            GainOut: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            MakeUp: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
         };
         Gate: {
-            Threshold: (value?: Value) => any;
-            Damping: (value?: Value) => any;
-            BPSidechain: (value?: Value) => any;
-            Attack: (value?: Value) => any;
-            Hold: (value?: Value) => any;
-            Release: (value?: Value) => any;
+            Threshold: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            Damping: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            BPSidechain: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            Attack: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            Hold: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            Release: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
         };
         Denoiser: {
-            Threshold: (value?: Value) => any;
+            Threshold: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
         };
         Pitch: {
-            On: (value?: Value) => any;
-            DryWet: (value?: Value) => any;
-            PitchValue: (value?: Value) => any;
-            LoFormant: (value?: Value) => any;
-            MedFormant: (value?: Value) => any;
-            HiFormant: (value?: Value) => any;
+            On: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            DryWet: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            PitchValue: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            LoFormant: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            MedFormant: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            HiFormant: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
         };
-        Karaoke: (value?: Value) => any;
-        Limit: (value?: Value) => any;
-        EQGain1: (value?: Value) => any;
-        EQGain2: (value?: Value) => any;
-        EQGain3: (value?: Value) => any;
-        Label: (value?: Value) => any;
-        A1: (value?: Value) => any;
-        A2: (value?: Value) => any;
-        A3: (value?: Value) => any;
-        A4: (value?: Value) => any;
-        A5: (value?: Value) => any;
-        B1: (value?: Value) => any;
-        B2: (value?: Value) => any;
-        B3: (value?: Value) => any;
-        FadeTo: (value?: Value) => any;
-        FadeBy: (value?: Value) => any;
-        Reverb: (value?: Value) => any;
-        Delay: (value?: Value) => any;
-        Fx1: (value?: Value) => any;
-        Fx2: (value?: Value) => any;
-        PostReverb: (value?: Value) => any;
-        PostDelay: (value?: Value) => any;
-        PostFx1: (value?: Value) => any;
-        PostFx2: (value?: Value) => any;
+        Karaoke: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        Limit: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        EQGain1: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        EQGain2: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        EQGain3: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        Label: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        A1: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        A2: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        A3: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        A4: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        A5: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        B1: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        B2: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        B3: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        FadeTo: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        FadeBy: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        Reverb: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        Delay: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        Fx1: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        Fx2: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        PostReverb: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        PostDelay: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        PostFx1: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        PostFx2: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
         EQ: {
-            on: (value?: Value) => any;
-            AB: (value?: Value) => any;
+            on: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            AB: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
             channel: (j: number) => {
                 cell: (k: number) => {
-                    on: (value?: Value) => any;
-                    type: (value?: Value) => any;
-                    f: (value?: Value) => any;
-                    gain: (value?: Value) => any;
-                    q: (value?: Value) => any;
+                    on: {
+                        set: (value: Value) => Promise<any>;
+                        get: () => any;
+                    };
+                    type: {
+                        set: (value: Value) => Promise<any>;
+                        get: () => any;
+                    };
+                    f: {
+                        set: (value: Value) => Promise<any>;
+                        get: () => any;
+                    };
+                    gain: {
+                        set: (value: Value) => Promise<any>;
+                        get: () => any;
+                    };
+                    q: {
+                        set: (value: Value) => Promise<any>;
+                        get: () => any;
+                    };
                 };
             };
         };
-        VAIO: (value?: Value) => any;
-        App: (k: number) => {
-            Gain: (value?: Value) => any;
-            Mute: (value?: Value) => any;
+        VAIO: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
         };
-        AppGain: (value?: Value) => any;
-        AppMute: (value?: Value) => any;
+        App: (k: number) => {
+            Gain: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            Mute: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+        };
+        AppGain: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        AppMute: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
         device: {
-            name: (value?: Value) => any;
-            sr: (value?: Value) => any;
-            wdm: (value?: Value) => any;
-            ks: (value?: Value) => any;
-            mme: (value?: Value) => any;
-            asio: (value?: Value) => any;
+            name: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            sr: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            wdm: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            ks: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            mme: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            asio: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
         };
     };
     Bus: (i: number) => {
-        Mono: (value?: Value) => any;
-        Mute: (value?: Value) => any;
+        Mono: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        Mute: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
         EQ: {
-            on: (value?: Value) => any;
-            AB: (value?: Value) => any;
+            on: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            AB: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
             channel: (j: number) => {
                 cell: (k: number) => {
-                    on: (value?: Value) => any;
-                    type: (value?: Value) => any;
-                    f: (value?: Value) => any;
-                    gain: (value?: Value) => any;
-                    q: (value?: Value) => any;
+                    on: {
+                        set: (value: Value) => Promise<any>;
+                        get: () => any;
+                    };
+                    type: {
+                        set: (value: Value) => Promise<any>;
+                        get: () => any;
+                    };
+                    f: {
+                        set: (value: Value) => Promise<any>;
+                        get: () => any;
+                    };
+                    gain: {
+                        set: (value: Value) => Promise<any>;
+                        get: () => any;
+                    };
+                    q: {
+                        set: (value: Value) => Promise<any>;
+                        get: () => any;
+                    };
                 };
             };
         };
-        Gain: (value?: Value) => any;
-        Label: (value?: Value) => any;
-        mode: {
-            normal: (value?: Value) => any;
-            Amix: (value?: Value) => any;
-            Bmix: (value?: Value) => any;
-            Repeat: (value?: Value) => any;
-            Composite: (value?: Value) => any;
-            TVMix: (value?: Value) => any;
-            UpMix21: (value?: Value) => any;
-            UpMix41: (value?: Value) => any;
-            UpMix61: (value?: Value) => any;
-            CenterOnly: (value?: Value) => any;
-            LFEOnly: (value?: Value) => any;
-            RearOnly: (value?: Value) => any;
+        Gain: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
         };
-        FadeTo: (value?: Value) => any;
-        FadeBy: (value?: Value) => any;
-        Sel: (value?: Value) => any;
-        ReturnReverb: (value?: Value) => any;
-        ReturnDelay: (value?: Value) => any;
-        ReturnFx1: (value?: Value) => any;
-        ReturnFx2: (value?: Value) => any;
-        Monitor: (value?: Value) => any;
-        VAIO: (value?: Value) => any;
+        Label: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        mode: {
+            normal: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            Amix: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            Bmix: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            Repeat: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            Composite: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            TVMix: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            UpMix21: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            UpMix41: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            UpMix61: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            CenterOnly: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            LFEOnly: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            RearOnly: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+        };
+        FadeTo: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        FadeBy: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        Sel: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        ReturnReverb: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        ReturnDelay: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        ReturnFx1: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        ReturnFx2: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        Monitor: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        VAIO: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
         device: {
-            name: (value?: Value) => any;
-            sr: (value?: Value) => any;
-            wdm: (value?: Value) => any;
-            ks: (value?: Value) => any;
-            mme: (value?: Value) => any;
-            asio: (value?: Value) => any;
+            name: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            sr: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            wdm: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            ks: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            mme: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            asio: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
         };
     };
     Fx: {
         Reverb: {
-            On: (value?: Value) => any;
-            AB: (value?: Value) => any;
+            On: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            AB: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
         };
         Delay: {
-            On: (value?: Value) => any;
-            AB: (value?: Value) => any;
+            On: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            AB: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
         };
     };
     patch: {
-        asio: (i: number) => (value?: Value) => any;
-        OutA2: (i: number) => (value?: Value) => any;
-        OutA3: (i: number) => (value?: Value) => any;
-        OutA4: (i: number) => (value?: Value) => any;
-        OutA5: (i: number) => (value?: Value) => any;
-        composite: (j: number) => (value?: Value) => any;
-        insert: (k: number) => (value?: Value) => any;
-        PostFaderComposite: (value?: Value) => any;
-        PostFxInsert: (value?: Value) => any;
+        asio: (i: number) => {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        OutA2: (i: number) => {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        OutA3: (i: number) => {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        OutA4: (i: number) => {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        OutA5: (i: number) => {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        composite: (j: number) => {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        insert: (k: number) => {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        PostFaderComposite: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        PostFxInsert: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
     };
     Option: {
-        sr: (value?: Value) => any;
-        ASIOsr: (value?: Value) => any;
-        delay: (i: number) => (value?: Value) => any;
+        sr: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        ASIOsr: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        delay: (i: number) => {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
         buffer: {
-            mme: (value?: Value) => any;
-            wdm: (value?: Value) => any;
-            ks: (value?: Value) => any;
-            asio: (value?: Value) => any;
+            mme: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            wdm: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            ks: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            asio: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
         };
         mode: {
-            exclusif: (value?: Value) => any;
-            swift: (value?: Value) => any;
+            exclusif: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            swift: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
         };
-        MonitorOnSEL: (value?: Value) => any;
-        SliderMode: (value?: Value) => any;
+        MonitorOnSEL: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        SliderMode: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
     };
     recorder: {
-        stop: (value?: Value) => any;
-        play: (value?: Value) => any;
-        replay: (value?: Value) => any;
-        ff: (value?: Value) => any;
-        rew: (value?: Value) => any;
-        A1: (value?: Value) => any;
-        A2: (value?: Value) => any;
-        A3: (value?: Value) => any;
-        A4: (value?: Value) => any;
-        A5: (value?: Value) => any;
-        B1: (value?: Value) => any;
-        B2: (value?: Value) => any;
-        B3: (value?: Value) => any;
-        record: (value?: Value) => any;
-        pause: (value?: Value) => any;
-        goto: (value?: Value) => any;
-        load: (value?: Value) => any;
-        samplerate: (value?: Value) => any;
-        ArmStrip: (i: number) => (value?: Value) => any;
-        ArmBus: (i: number) => (value?: Value) => any;
-        mode: {
-            recbus: (value?: Value) => any;
-            PlayOnLoad: (value?: Value) => any;
-            Loop: (value?: Value) => any;
-            MultiTrack: (value?: Value) => any;
+        stop: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
         };
-        bitResolution: (value?: Value) => any;
-        Channel: (value?: Value) => any;
-        kbps: (value?: Value) => any;
-        FileType: (value?: Value) => any;
-        gain: (value?: Value) => any;
+        play: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        replay: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        ff: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        rew: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        A1: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        A2: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        A3: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        A4: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        A5: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        B1: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        B2: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        B3: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        record: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        pause: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        goto: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        load: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        samplerate: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        ArmStrip: (i: number) => {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        ArmBus: (i: number) => {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        mode: {
+            recbus: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            PlayOnLoad: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            Loop: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            MultiTrack: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+        };
+        bitResolution: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        Channel: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        kbps: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        FileType: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
+        gain: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
     };
     vban: {
-        Enable: (value?: Value) => any;
+        Enable: {
+            set: (value: Value) => Promise<any>;
+            get: () => any;
+        };
         instream: (i: number) => {
-            on: (value?: Value) => any;
-            name: (value?: Value) => any;
-            ip: (value?: Value) => any;
-            port: (value?: Value) => any;
-            sr: (value?: Value) => any;
-            channel: (value?: Value) => any;
-            bit: (value?: Value) => any;
-            quality: (value?: Value) => any;
-            route: (value?: Value) => any;
+            on: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            name: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            ip: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            port: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            sr: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            channel: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            bit: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            quality: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            route: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
         };
         outstream: (i: number) => {
-            on: (value?: Value) => any;
-            name: (value?: Value) => any;
-            ip: (value?: Value) => any;
-            port: (value?: Value) => any;
-            sr: (value?: Value) => any;
-            channel: (value?: Value) => any;
-            bit: (value?: Value) => any;
-            quality: (value?: Value) => any;
-            route: (value?: Value) => any;
+            on: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            name: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            ip: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            port: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            sr: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            channel: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            bit: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            quality: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
+            route: {
+                set: (value: Value) => Promise<any>;
+                get: () => any;
+            };
         };
     };
 };

@@ -51,277 +51,893 @@ export default class Voicemeeter {
     isParametersDirty: () => any;
     parameters: {
         Command: {
-            Shutdown: (value?: string | number | undefined) => any;
-            Show: (value?: string | number | undefined) => any;
-            Restart: (value?: string | number | undefined) => any;
-            Eject: (value?: string | number | undefined) => any;
-            Reset: (value?: string | number | undefined) => any;
-            Save: (value?: string | number | undefined) => any;
-            Load: (value?: string | number | undefined) => any;
-            Lock: (value?: string | number | undefined) => any;
+            Shutdown: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            Show: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            Restart: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            Eject: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            Reset: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            Save: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            Load: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            Lock: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
             Button: (i: number) => {
-                State: (value?: string | number | undefined) => any;
-                StateOnly: (value?: string | number | undefined) => any;
-                Trigger: (value?: string | number | undefined) => any;
-                Color: (value?: string | number | undefined) => any;
+                State: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                StateOnly: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                Trigger: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                Color: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
             };
             DialogShow: {
-                VBANCHAT: (value?: string | number | undefined) => any;
+                VBANCHAT: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
             };
-            SaveBUSEQ: (j: number) => (value?: string | number | undefined) => any;
-            LoadBUSEQ: (j: number) => (value?: string | number | undefined) => any;
-            SaveStripEQ: (j: number) => (value?: string | number | undefined) => any;
-            LoadStripEQ: (j: number) => (value?: string | number | undefined) => any;
+            SaveBUSEQ: (j: number) => {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            LoadBUSEQ: (j: number) => {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            SaveStripEQ: (j: number) => {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            /**
+             * Getter $outputDevices
+             * @return {Device[] }
+             */
+            LoadStripEQ: (j: number) => {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
             Preset: (k: number) => {
-                Recall: (value?: string | number | undefined) => any;
+                Recall: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
             };
         };
         Strip: (i: number) => {
-            Mono: (value?: string | number | undefined) => any;
-            Mute: (value?: string | number | undefined) => any;
-            Solo: (value?: string | number | undefined) => any;
-            MC: (value?: string | number | undefined) => any;
-            Gain: (value?: string | number | undefined) => any;
-            GainLayer: (j: number) => (value?: string | number | undefined) => any;
-            Pan_x: (value?: string | number | undefined) => any;
-            Pan_y: (value?: string | number | undefined) => any;
-            Color_x: (value?: string | number | undefined) => any;
-            Color_y: (value?: string | number | undefined) => any;
-            fx_x: (value?: string | number | undefined) => any;
-            fx_y: (value?: string | number | undefined) => any;
-            Audibility: (value?: string | number | undefined) => any;
+            Mono: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            Mute: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            Solo: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            MC: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            Gain: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            GainLayer: (j: number) => {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            Pan_x: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            Pan_y: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            Color_x: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            Color_y: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            fx_x: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            fx_y: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            Audibility: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
             Comp: {
-                GainIn: (value?: string | number | undefined) => any;
-                Ratio: (value?: string | number | undefined) => any;
-                Threshold: (value?: string | number | undefined) => any; /**
-                 * Getter $type
-                 * @return {VoiceMeeterTypes}
-                 */
-                Attack: (value?: string | number | undefined) => any;
-                Release: (value?: string | number | undefined) => any;
-                Knee: (value?: string | number | undefined) => any;
-                GainOut: (value?: string | number | undefined) => any;
-                MakeUp: (value?: string | number | undefined) => any;
+                GainIn: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                Ratio: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                Threshold: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                Attack: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                Release: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                Knee: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                GainOut: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                MakeUp: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
             };
             Gate: {
-                Threshold: (value?: string | number | undefined) => any;
-                Damping: (value?: string | number | undefined) => any;
-                BPSidechain: (value?: string | number | undefined) => any;
-                Attack: (value?: string | number | undefined) => any;
-                Hold: (value?: string | number | undefined) => any;
-                Release: (value?: string | number | undefined) => any;
+                Threshold: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                Damping: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                BPSidechain: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                Attack: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                Hold: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                Release: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
             };
             Denoiser: {
-                Threshold: (value?: string | number | undefined) => any;
+                Threshold: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                }; /**
+                 * Gets realtime audio level see the VoicemeeterRemote API: [VoicemeeterRemote.h GetLevel](https://github.com/mirror/equalizerapo/blob/7aece1b788fce5aa11873f3842a0d01f7c78454b/VoicemeeterClient/VoicemeeterRemote.h#L284),
+                 * for more details about the parameters
+                 * @param {0|1|2|3} type 0 = pre fader input levels. 1 = post fader input levels. 2= post Mute input levels. 3= output levels
+                 * @param channel audio channel zero based index
+                 * @returns {float} Current audio level
+                 */
             };
             Pitch: {
-                On: (value?: string | number | undefined) => any;
-                DryWet: (value?: string | number | undefined) => any;
-                PitchValue: (value?: string | number | undefined) => any;
-                LoFormant: (value?: string | number | undefined) => any;
-                MedFormant: (value?: string | number | undefined) => any;
-                HiFormant: (value?: string | number | undefined) => any;
+                On: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                DryWet: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                PitchValue: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                LoFormant: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                MedFormant: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                HiFormant: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
             };
-            Karaoke: (value?: string | number | undefined) => any;
-            Limit: (value?: string | number | undefined) => any;
-            EQGain1: (value?: string | number | undefined) => any;
-            EQGain2: (value?: string | number | undefined) => any;
-            EQGain3: (value?: string | number | undefined) => any;
-            Label: (value?: string | number | undefined) => any;
-            A1: (value?: string | number | undefined) => any;
-            A2: (value?: string | number | undefined) => any;
-            A3: (value?: string | number | undefined) => any;
-            A4: (value?: string | number | undefined) => any;
-            A5: (value?: string | number | undefined) => any;
-            B1: (value?: string | number | undefined) => any;
-            B2: (value?: string | number | undefined) => any;
-            B3: (value?: string | number | undefined) => any;
-            FadeTo: (value?: string | number | undefined) => any;
-            FadeBy: (value?: string | number | undefined) => any;
-            Reverb: (value?: string | number | undefined) => any;
-            Delay: (value?: string | number | undefined) => any;
-            Fx1: (value?: string | number | undefined) => any;
-            Fx2: (value?: string | number | undefined) => any;
-            /**
-             * Checks whether properties has been changed and calls all event listeners
-             */
-            PostReverb: (value?: string | number | undefined) => any;
-            PostDelay: (value?: string | number | undefined) => any;
-            PostFx1: (value?: string | number | undefined) => any;
-            PostFx2: (value?: string | number | undefined) => any;
+            Karaoke: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            Limit: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            EQGain1: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            EQGain2: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            EQGain3: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            Label: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            A1: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            A2: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            A3: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            A4: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            A5: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            B1: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            B2: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            B3: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            FadeTo: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            FadeBy: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            Reverb: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            Delay: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            Fx1: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            Fx2: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            PostReverb: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            PostDelay: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            PostFx1: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            PostFx2: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
             EQ: {
-                on: (value?: string | number | undefined) => any;
-                AB: (value?: string | number | undefined) => any;
+                on: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                AB: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
                 channel: (j: number) => {
                     cell: (k: number) => {
-                        on: (value?: string | number | undefined) => any;
-                        type: (value?: string | number | undefined) => any;
-                        f: (value?: string | number | undefined) => any;
-                        gain: (value?: string | number | undefined) => any;
-                        q: (value?: string | number | undefined) => any;
+                        on: {
+                            set: (value: string | number) => Promise<any>;
+                            get: () => any;
+                        };
+                        type: {
+                            set: (value: string | number) => Promise<any>;
+                            get: () => any;
+                        };
+                        f: {
+                            set: (value: string | number) => Promise<any>;
+                            get: () => any;
+                        };
+                        gain: {
+                            set: (value: string | number) => Promise<any>;
+                            get: () => any;
+                        };
+                        q: {
+                            set: (value: string | number) => Promise<any>;
+                            get: () => any;
+                        };
                     };
                 };
             };
-            VAIO: (value?: string | number | undefined) => any;
-            App: (k: number) => {
-                Gain: (value?: string | number | undefined) => any;
-                Mute: (value?: string | number | undefined) => any;
+            VAIO: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
             };
-            AppGain: (value?: string | number | undefined) => any;
-            AppMute: (value?: string | number | undefined) => any;
+            App: (k: number) => {
+                Gain: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                Mute: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+            };
+            AppGain: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            AppMute: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
             device: {
-                name: (value?: string | number | undefined) => any;
-                sr: (value?: string | number | undefined) => any;
-                wdm: (value?: string | number | undefined) => any;
-                ks: (value?: string | number | undefined) => any;
-                mme: (value?: string | number | undefined) => any;
-                asio: (value?: string | number | undefined) => any;
+                name: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                sr: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                wdm: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                ks: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                mme: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                asio: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
             };
         };
         Bus: (i: number) => {
-            Mono: (value?: string | number | undefined) => any;
-            Mute: (value?: string | number | undefined) => any;
+            Mono: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            Mute: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
             EQ: {
-                on: (value?: string | number | undefined) => any;
-                AB: (value?: string | number | undefined) => any;
+                on: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                AB: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
                 channel: (j: number) => {
                     cell: (k: number) => {
-                        on: (value?: string | number | undefined) => any;
-                        type: (value?: string | number | undefined) => any;
-                        f: (value?: string | number | undefined) => any;
-                        gain: (value?: string | number | undefined) => any;
-                        q: (value?: string | number | undefined) => any;
+                        on: {
+                            set: (value: string | number) => Promise<any>;
+                            get: () => any;
+                        };
+                        type: {
+                            set: (value: string | number) => Promise<any>;
+                            get: () => any;
+                        };
+                        f: {
+                            set: (value: string | number) => Promise<any>;
+                            get: () => any;
+                        };
+                        gain: {
+                            set: (value: string | number) => Promise<any>;
+                            get: () => any;
+                        };
+                        q: {
+                            set: (value: string | number) => Promise<any>;
+                            get: () => any;
+                        };
                     };
                 };
             };
-            Gain: (value?: string | number | undefined) => any;
-            Label: (value?: string | number | undefined) => any;
-            mode: {
-                normal: (value?: string | number | undefined) => any;
-                Amix: (value?: string | number | undefined) => any;
-                Bmix: (value?: string | number | undefined) => any;
-                Repeat: (value?: string | number | undefined) => any;
-                Composite: (value?: string | number | undefined) => any;
-                TVMix: (value?: string | number | undefined) => any;
-                UpMix21: (value?: string | number | undefined) => any;
-                UpMix41: (value?: string | number | undefined) => any;
-                UpMix61: (value?: string | number | undefined) => any;
-                CenterOnly: (value?: string | number | undefined) => any;
-                LFEOnly: (value?: string | number | undefined) => any;
-                RearOnly: (value?: string | number | undefined) => any;
+            Gain: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
             };
-            FadeTo: (value?: string | number | undefined) => any;
-            FadeBy: (value?: string | number | undefined) => any;
-            Sel: (value?: string | number | undefined) => any;
-            ReturnReverb: (value?: string | number | undefined) => any;
-            ReturnDelay: (value?: string | number | undefined) => any;
-            ReturnFx1: (value?: string | number | undefined) => any;
-            ReturnFx2: (value?: string | number | undefined) => any;
-            Monitor: (value?: string | number | undefined) => any;
-            VAIO: (value?: string | number | undefined) => any;
+            Label: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            mode: {
+                normal: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                Amix: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                Bmix: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                Repeat: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                Composite: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                TVMix: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                UpMix21: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                UpMix41: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                UpMix61: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                CenterOnly: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                LFEOnly: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                RearOnly: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+            };
+            FadeTo: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            FadeBy: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            Sel: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            ReturnReverb: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            ReturnDelay: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            ReturnFx1: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            ReturnFx2: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            Monitor: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            VAIO: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
             device: {
-                name: (value?: string | number | undefined) => any;
-                sr: (value?: string | number | undefined) => any;
-                wdm: (value?: string | number | undefined) => any;
-                ks: (value?: string | number | undefined) => any;
-                mme: (value?: string | number | undefined) => any;
-                asio: (value?: string | number | undefined) => any;
+                name: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                sr: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                wdm: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                ks: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                mme: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                asio: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
             };
         };
         Fx: {
             Reverb: {
-                On: (value?: string | number | undefined) => any;
-                AB: (value?: string | number | undefined) => any;
+                On: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                AB: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
             };
             Delay: {
-                On: (value?: string | number | undefined) => any;
-                AB: (value?: string | number | undefined) => any;
+                On: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                AB: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
             };
         };
         patch: {
-            asio: (i: number) => (value?: string | number | undefined) => any;
-            OutA2: (i: number) => (value?: string | number | undefined) => any;
-            OutA3: (i: number) => (value?: string | number | undefined) => any;
-            OutA4: (i: number) => (value?: string | number | undefined) => any;
-            OutA5: (i: number) => (value?: string | number | undefined) => any;
-            composite: (j: number) => (value?: string | number | undefined) => any;
-            insert: (k: number) => (value?: string | number | undefined) => any;
-            PostFaderComposite: (value?: string | number | undefined) => any;
-            PostFxInsert: (value?: string | number | undefined) => any;
+            asio: (i: number) => {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            OutA2: (i: number) => {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            OutA3: (i: number) => {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            OutA4: (i: number) => {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            OutA5: (i: number) => {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            composite: (j: number) => {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            insert: (k: number) => {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            PostFaderComposite: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            PostFxInsert: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
         };
         Option: {
-            sr: (value?: string | number | undefined) => any;
-            ASIOsr: (value?: string | number | undefined) => any;
-            delay: (i: number) => (value?: string | number | undefined) => any;
+            sr: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            ASIOsr: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            delay: (i: number) => {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
             buffer: {
-                mme: (value?: string | number | undefined) => any;
-                wdm: (value?: string | number | undefined) => any;
-                ks: (value?: string | number | undefined) => any;
-                asio: (value?: string | number | undefined) => any;
+                mme: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                wdm: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                ks: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                asio: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
             };
             mode: {
-                exclusif: (value?: string | number | undefined) => any;
-                swift: (value?: string | number | undefined) => any;
+                exclusif: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                swift: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
             };
-            MonitorOnSEL: (value?: string | number | undefined) => any;
-            SliderMode: (value?: string | number | undefined) => any;
+            MonitorOnSEL: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            SliderMode: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
         };
         recorder: {
-            stop: (value?: string | number | undefined) => any;
-            play: (value?: string | number | undefined) => any;
-            replay: (value?: string | number | undefined) => any;
-            ff: (value?: string | number | undefined) => any;
-            rew: (value?: string | number | undefined) => any;
-            A1: (value?: string | number | undefined) => any;
-            A2: (value?: string | number | undefined) => any;
-            A3: (value?: string | number | undefined) => any;
-            A4: (value?: string | number | undefined) => any;
-            A5: (value?: string | number | undefined) => any;
-            B1: (value?: string | number | undefined) => any;
-            B2: (value?: string | number | undefined) => any;
-            B3: (value?: string | number | undefined) => any;
-            record: (value?: string | number | undefined) => any;
-            pause: (value?: string | number | undefined) => any;
-            goto: (value?: string | number | undefined) => any;
-            load: (value?: string | number | undefined) => any;
-            samplerate: (value?: string | number | undefined) => any;
-            ArmStrip: (i: number) => (value?: string | number | undefined) => any;
-            ArmBus: (i: number) => (value?: string | number | undefined) => any;
-            mode: {
-                recbus: (value?: string | number | undefined) => any;
-                PlayOnLoad: (value?: string | number | undefined) => any;
-                Loop: (value?: string | number | undefined) => any;
-                MultiTrack: (value?: string | number | undefined) => any;
+            stop: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
             };
-            bitResolution: (value?: string | number | undefined) => any;
-            Channel: (value?: string | number | undefined) => any;
-            kbps: (value?: string | number | undefined) => any;
-            FileType: (value?: string | number | undefined) => any;
-            gain: (value?: string | number | undefined) => any;
+            play: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            replay: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            ff: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            rew: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            A1: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            A2: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            A3: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            A4: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            A5: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            B1: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            B2: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            B3: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            record: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            pause: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            goto: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            load: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            samplerate: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            ArmStrip: (i: number) => {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            ArmBus: (i: number) => {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            mode: {
+                recbus: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                PlayOnLoad: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                Loop: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                MultiTrack: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+            };
+            bitResolution: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            Channel: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            kbps: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            FileType: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
+            gain: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
         };
         vban: {
-            Enable: (value?: string | number | undefined) => any;
+            Enable: {
+                set: (value: string | number) => Promise<any>;
+                get: () => any;
+            };
             instream: (i: number) => {
-                on: (value?: string | number | undefined) => any;
-                name: (value?: string | number | undefined) => any;
-                ip: (value?: string | number | undefined) => any;
-                port: (value?: string | number | undefined) => any;
-                sr: (value?: string | number | undefined) => any;
-                channel: (value?: string | number | undefined) => any;
-                bit: (value?: string | number | undefined) => any;
-                quality: (value?: string | number | undefined) => any;
-                route: (value?: string | number | undefined) => any;
+                on: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                name: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                ip: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                port: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                sr: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                channel: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                bit: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                quality: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                route: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
             };
             outstream: (i: number) => {
-                on: (value?: string | number | undefined) => any;
-                name: (value?: string | number | undefined) => any;
-                ip: (value?: string | number | undefined) => any;
-                port: (value?: string | number | undefined) => any;
-                sr: (value?: string | number | undefined) => any;
-                channel: (value?: string | number | undefined) => any;
-                bit: (value?: string | number | undefined) => any;
-                quality: (value?: string | number | undefined) => any;
-                route: (value?: string | number | undefined) => any;
+                on: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                name: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                ip: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                port: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                sr: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                channel: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                bit: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                quality: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
+                route: {
+                    set: (value: string | number) => Promise<any>;
+                    get: () => any;
+                };
             };
         };
     };
