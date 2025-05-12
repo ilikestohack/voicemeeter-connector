@@ -43,6 +43,10 @@ jobs:
             #   with:
             #       token: ${{ secrets.NPM_TOKEN }}
 
+            - name: Read package.json
+              uses: dutscher/read-package-json-endpoint-actions@v1.33.7
+              id: package-json-endpoint
+
             - name: Create Git Release
               if: steps.publish.outputs.type != 'none'
               id: create_release
@@ -50,8 +54,8 @@ jobs:
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               with:
-                  tag_name: ${{ steps.publish.outputs.version }}
-                  release_name: Release ${{ steps.publish.outputs.version }}
-                  body: ${{ steps.publish.outputs.version }}
+                  tag_name: ${{ steps.package-json-endpoint.outputs.endpoint }}
+                  release_name: Release ${{ steps.package-json-endpoint.outputs.endpoint }}
+                  body: ${{ steps.package-json-endpoint.outputs.endpoint }}
                   draft: false
                   prerelease: false
