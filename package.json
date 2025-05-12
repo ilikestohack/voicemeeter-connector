@@ -17,6 +17,7 @@
 	},
 	"dependencies": {
 		"koffi": "^2.10.1",
+		"voicemeeter-connector": "file:",
 		"winreg": "1.2.4"
 	},
 	"devDependencies": {

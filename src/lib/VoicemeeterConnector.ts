@@ -2,7 +2,7 @@
 import koffi from "koffi";
 import DLLHandler from "./DLLHandler";
 import { Device, VMLibrary, VoiceMeeterTypes } from "../types/VoicemeeterTypes";
-import { BusProperties, StripProperties } from "./VoicemeeterConsts";
+import { vmParameters } from "./VoicemeeterParameters";
 
 /**
  * @ignore
@@ -52,8 +52,8 @@ export default class Voicemeeter {
 		});
 	}
 
+	public isConnected = false;
 	private isInitialised = false;
-	private isConnected = false;
 	private outputDevices: Device[] = [];
 	private inputDevices: Device[] = [];
 	private version = "";
@@ -177,44 +177,7 @@ export default class Voicemeeter {
 		return libVM.VBVMR_IsParametersDirty();
 	};
 
-	/**
-	 * Gets a bus parameter.
-	 * @param  {number} index Index of the bus
-	 * @param  {BusProperties} property Property which should be get
-	 */
-
-	public getBusParameter = (index: number, property: BusProperties) => {
-		return this.getParameter("Bus", index, property);
-	};
-
-	/**
-	 * Gets a strip parameter
-	 * @param  {number} index Index of the strip
-	 * @param  {StripProperties} property Property which should be get
-	 */
-	public getStripParameter = (index: number, property: StripProperties) => {
-		return this.getParameter("Strip", index, property);
-	};
-
-	/**
-	 * Sets a parameter of a strip.
-	 * @param  {number} index Strip number
-	 * @param  {StripProperties} property Propertyname which should be changed
-	 * @param  {any} value Property value
-	 */
-	public setStripParameter = (index: number, property: StripProperties, value: any) => {
-		return this.setParameter("Strip", index, property, value);
-	};
-
-	/**
-	 * Sets a parameter of a bus.
-	 * @param  {number} index Bus number
-	 * @param  {StripProperties} property Propertyname which should be changed
-	 * @param  {any} value Property value
-	 */
-	public setBusParameter = (index: number, property: BusProperties, value: any) => {
-		return this.setParameter("Bus", index, property, value);
-	};
+	public parameters = vmParameters(this);
 
 	/**
 	 * @param  {()=>any} fn Function which should be called if something changes
@@ -307,36 +270,6 @@ export default class Voicemeeter {
 		return version;
 	};
 
-	/**
-	 * Gets a parameter of voicemeeter
-	 * @param  {'Strip'|'Bus'} selector Strip or Bus
-	 * @param  {number} index Number of strip or bus
-	 * @param  {StripProperties|BusProperties} property Property which should be read
-	 */
-	private getParameter = (selector: "Strip" | "Bus", index: number, property: StripProperties | BusProperties) => {
-		const parameterName = `${selector}[${index}].${property}`;
-		return this.getOption(parameterName);
-	};
-
-	/**
-	 * Sets a parameter of a bus or Strip
-	 * @param  {'Strip'|'Bus'} selector
-	 * @param  {number} index Number of strip or bus
-	 * @param  {StripProperties|BusProperties} property Propertyname which should be changed
-	 * @param  {any} value Property value
-	 */
-	private setParameter = (
-		selector: "Strip" | "Bus",
-		index: number,
-		property: StripProperties | BusProperties,
-		value: any
-	): Promise<any> => {
-		if (!this.isConnected) {
-			throw new Error("Not connected ");
-		}
-		const scriptString = `${selector}[${index}].${property}=${value};`;
-		return this.setOption(scriptString);
-	};
 	/**
 	 * Gets realtime audio level see the VoicemeeterRemote API: [VoicemeeterRemote.h GetLevel](https://github.com/mirror/equalizerapo/blob/7aece1b788fce5aa11873f3842a0d01f7c78454b/VoicemeeterClient/VoicemeeterRemote.h#L284),
 	 * for more details about the parameters
