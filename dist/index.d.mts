@@ -1,5 +1,34 @@
-import { Device, VoiceMeeterTypes } from "../types/VoicemeeterTypes";
-export default class Voicemeeter {
+declare type VoiceMeeterTypes = "voicemeeter" | "voicemeeterBanana" | "voicemeeterPotato" | undefined;
+interface VMLibrary {
+    VBVMR_Login: any;
+    VBVMR_Logout: any;
+    VBVMR_RunVoicemeeter: (voicemeeterType: any) => number;
+    VBVMR_IsParametersDirty: any;
+    VBVMR_GetLevel: any;
+    VBVMR_GetParameterFloat: any;
+    VBVMR_GetParameterStringA: any;
+    VBVMR_SetParameters: any;
+    VBVMR_Output_GetDeviceNumber: any;
+    VBVMR_Output_GetDeviceDescA: any;
+    VBVMR_Input_GetDeviceNumber: any;
+    VBVMR_Input_GetDeviceDescA: any;
+    VBVMR_GetVoicemeeterType: any;
+    VBVMR_GetVoicemeeterVersion: (versionPtr: any) => number;
+}
+interface Device {
+    name: string;
+    hardwareId: string;
+    type: number;
+}
+
+type VoicemeeterTypes_Device = Device;
+type VoicemeeterTypes_VMLibrary = VMLibrary;
+type VoicemeeterTypes_VoiceMeeterTypes = VoiceMeeterTypes;
+declare namespace VoicemeeterTypes {
+  export type { VoicemeeterTypes_Device as Device, VoicemeeterTypes_VMLibrary as VMLibrary, VoicemeeterTypes_VoiceMeeterTypes as VoiceMeeterTypes };
+}
+
+declare class Voicemeeter {
     /**
      * Initializes the voice meeter dll connection.
      * This call is neccessary to use the api. It returns a promise with a VoiceMeeter instance
@@ -977,3 +1006,5 @@ export default class Voicemeeter {
      */
     getLevel: (type: 0 | 1 | 2 | 3, channel: number) => number;
 }
+
+export { Voicemeeter, VoicemeeterTypes as types };
